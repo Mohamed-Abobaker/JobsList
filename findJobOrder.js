@@ -1,6 +1,9 @@
 // The function below was developed steadily by using TDD methodology, and tests can viewed in spec file.
 
 const findJobOrder = listOfJobs => {
+  //The if statement returns a empty string if one is passed in as a parameter.
+  if (!listOfJobs || /^\s*$/.test(listOfJobs)) return "";
+
   const jobOrderArr = [];
   let jobsArr = [];
   let dependenciesArr = [];

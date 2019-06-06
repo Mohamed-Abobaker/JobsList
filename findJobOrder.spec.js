@@ -1,6 +1,9 @@
 const { findJobOrder } = require("./findJobOrder");
 
 describe("findJobOrder", () => {
+  it("returns an empty string if passed one", () => {
+    expect(findJobOrder("     ")).toBe("");
+  });
   it("returns single letter string when single job inserted", () => {
     expect(findJobOrder("a => ")).toBe("a");
   });
